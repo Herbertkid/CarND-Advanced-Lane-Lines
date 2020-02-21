@@ -83,9 +83,9 @@ I verified that my perspective transform was working as expected by drawing the 
 #### 4. Find lane pixels
 I used a hisgram to find out the peaks of the half image then I divided the image into 15 windows to locate the left x points and right x points of the lane. Moreover  I set the margin with 50 and minpix with 50 to draw the polynomial
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
-![image5](./output_images/out_img.jpg, "out_img")
+![image7](./output_images/out_img.jpg "out_img")
 And to qucikly find the next frame of video, so that use the last image's second order polynomial to fit the new image's lane lines. The result like this:
-![image7](./output_images/result.jpg "result")
+![image8](./output_images/result.jpg "result")
 
 
 
@@ -98,7 +98,7 @@ Those in my code in `measure_curvature_real()`function.
 
 I used the `draw_lane()` function to draw the lane on the original image through `cv.fillPoly()` and `cv2,polylines()`. Second by the Minv to prespect back to the real world image. At last add the text on the image with the Left lane line curvature, Right lane line curvature, car offset from center information. Here is an example of my result on a test image:
 
-![image8](./output_images/img_addtext.jpg "img_addtext")
+![image9](./output_images/img_addtext.jpg "img_addtext")
 
 ---
 
